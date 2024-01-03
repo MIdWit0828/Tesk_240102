@@ -10,7 +10,7 @@ public class Application
     {
         RandomMaker rdm = new RandomMaker();
         System.out.println(rdm.randomNumber(1,10));
-        System.out.println(rdm.radomUpperAlphabet(7));
+        System.out.println(rdm.radomUpperAlphabet(5));
         System.out.println(rdm.rockPaperScissors());
         rdm.coinToss();
     }

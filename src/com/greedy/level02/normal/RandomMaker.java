@@ -10,8 +10,10 @@ public class RandomMaker
     public String radomUpperAlphabet(int length){
         //인자의 길이 만큼의 랜덤한 대문자 알파벳으로 이루어진 문자열을 반환함
         String str ="";
-        for(int i = length; i > 0; i--){
+        for(int i = 0 ; i < length; i++){
             char ch = (char)rd.nextInt(65,80);
+            char ch2 = (char) ((int)(Math.random()*26+'A'));    //랜덤 *구해야 하는 범위 + 최소값
+            char ch3 = (char) randomNumber('A','Z');        //상단에 작성한 코드로도 적용 가능
             //System.out.println(ch);
             str += ch;
         }
@@ -20,23 +22,23 @@ public class RandomMaker
     public String rockPaperScissors(){
         //가위, 바위, 보 중 한가지를 반환함
         int i = rd.nextInt(3);
-        String returnStr =null;
+        String str =null;
         switch (i)
         {
             case 0:
-                returnStr = "가위";
+                str = "가위";
                 break;
             case 1:
-                returnStr = "바위";
+                str = "바위";
                 break;
             case 2:
-                returnStr ="보";
+                str ="보";
                 break;
             default:
                 System.out.println("스위치 오류");
                 break;
         }
-        return returnStr;
+        return str;
     }
     public void coinToss(){
         //동전의 앞면 뒷면 중 한 가지를 반환함
